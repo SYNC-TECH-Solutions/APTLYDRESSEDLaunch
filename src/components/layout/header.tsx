@@ -39,7 +39,7 @@ export default function Header() {
       <div className="container flex h-14 items-center">
         <div className="mr-4 flex">
           <Link href="/" className="mr-6 flex items-center space-x-2">
-            <span className="font-headline text-2xl font-bold tracking-wider">Aptly Dressed</span>
+            <span className="font-headline text-2xl font-bold tracking-wider">APTLY DRESSED</span>
           </Link>
           <div className="hidden md:flex">
             <NavLinks />
@@ -56,7 +56,7 @@ export default function Header() {
             <SheetContent side="left">
               <div className="p-4">
                 <Link href="/" className="mb-8 flex items-center space-x-2">
-                   <span className="font-headline text-2xl font-bold tracking-wider">Aptly Dressed</span>
+                   <span className="font-headline text-2xl font-bold tracking-wider">APTLY DRESSED</span>
                 </Link>
                 <NavLinks className="flex-col space-x-0 space-y-4 items-start" />
               </div>

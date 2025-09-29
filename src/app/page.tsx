@@ -34,7 +34,7 @@ export default function ComingSoonPage() {
           </CardHeader>
           <CardContent className="space-y-8 p-6 md:p-8">
             <p className="font-body text-base text-muted-foreground md:text-lg">
-              Welcome to Aptly Dressed, your new destination for curated collections of high-quality, sustainable fashion. We&apos;re putting the final touches on a modern shopping experience designed to elevate your style. Be the first to know when we launch.
+              Welcome to APTLY DRESSED, your new destination for curated collections of high-quality, sustainable fashion. We&apos;re putting the final touches on a modern shopping experience designed to elevate your style. Be the first to know when we launch.
             </p>
             <NewsletterForm />
             <div className="pt-4">

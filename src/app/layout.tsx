@@ -5,8 +5,8 @@ import Header from '@/components/layout/header';
 import Footer from '@/components/layout/footer';
 
 export const metadata: Metadata = {
-  title: 'Aptly Dressed | Timeless Style, Curated for You',
-  description: 'Aptly Dressed: Your new destination for curated collections of high-quality, sustainable fashion.',
+  title: 'APTLY DRESSED | Timeless Style, Curated for You',
+  description: 'APTLY DRESSED: Your new destination for curated collections of high-quality, sustainable fashion.',
 };
 
 export default function RootLayout({

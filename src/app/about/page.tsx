@@ -26,7 +26,7 @@ export default function AboutPage() {
               <div>
                 <h2 className="font-headline text-3xl font-bold tracking-tight text-foreground mb-4">Our Story</h2>
                 <p className="text-muted-foreground mb-4">
-                  Aptly Dressed was born from a simple idea: that fashion should be intentional, sustainable, and timeless. In a world saturated with fleeting trends, we saw a need for a trusted voice to cut through the noise. We are not just another fashion site; we are your most trusted partner in style.
+                  APTLY DRESSED was born from a simple idea: that fashion should be intentional, sustainable, and timeless. In a world saturated with fleeting trends, we saw a need for a trusted voice to cut through the noise. We are not just another fashion site; we are your most trusted partner in style.
                 </p>
                 <p className="text-muted-foreground">
                   Our journey began with a passion for discovering pieces that blend exceptional quality with modern design. We are dedicated to the art of curation, hand-selecting items from brands that share our commitment to craftsmanship and ethical practices.
