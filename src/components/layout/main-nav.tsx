@@ -1,3 +1,4 @@
+
 'use client';
 
 import Link from 'next/link';
@@ -7,6 +8,7 @@ import { cn } from '@/lib/utils';
 const navLinks = [
   { href: '/', label: 'Home' },
   { href: '/about', label: 'About Us' },
+  { href: '/news-and-events', label: 'News & Events' },
   { href: '/contact', label: 'Contact' },
   { href: '/affiliate-disclosure', label: 'Affiliate Disclosure' },
 ];
@@ -22,7 +24,7 @@ export default function MainNav({ className }: { className?: string }) {
           href={link.href}
           className={cn(
             "text-sm font-medium transition-colors hover:text-primary",
-            pathname === link.href ? "text-primary" : "text-muted-foreground"
+            (pathname === link.href || (link.href !== '/' && pathname.startsWith(link.href))) ? "text-primary" : "text-muted-foreground"
           )}
         >
           {link.label}
@@ -31,3 +33,5 @@ export default function MainNav({ className }: { className?: string }) {
     </nav>
   );
 }
+
+    
