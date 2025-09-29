@@ -28,9 +28,6 @@ export default function ComingSoonPage() {
       <div className="relative z-10 flex min-h-screen flex-col items-center justify-center p-4 sm:p-6 md:p-8">
         <Card className="w-full max-w-lg bg-background/95 text-center shadow-2xl backdrop-blur-sm animate-in fade-in-50 duration-1000">
           <CardHeader className="space-y-6 pt-10">
-            <h2 className="font-headline text-3xl tracking-wider text-foreground/90">
-              Aptly Dressed
-            </h2>
             <h1 className="font-headline text-5xl font-bold uppercase leading-tight tracking-tight text-foreground md:text-6xl">
               Timeless Style is Coming Soon
             </h1>
