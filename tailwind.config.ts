@@ -10,8 +10,8 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        body: ['Inter', 'sans-serif'],
-        headline: ['"Space Grotesk"', 'sans-serif'],
+        body: ['Arial', 'sans-serif'],
+        headline: ['"Bebas Neue"', 'sans-serif'],
         code: ['monospace'],
       },
       colors: {
