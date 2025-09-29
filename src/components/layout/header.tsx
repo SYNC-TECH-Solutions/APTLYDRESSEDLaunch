@@ -10,6 +10,8 @@ import { cn } from '@/lib/utils';
 const navLinks = [
   { href: '/', label: 'Home' },
   { href: '/about', label: 'About Us' },
+  { href: '/contact', label: 'Contact' },
+  { href: '/affiliate-disclosure', label: 'Affiliate Disclosure' },
 ];
 
 export default function Header() {
