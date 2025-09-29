@@ -1,6 +1,7 @@
 'use client';
 
-import { useFormState, useFormStatus } from 'react-dom';
+import { useActionState } from 'react';
+import { useFormStatus } from 'react-dom';
 import { useEffect, useRef } from 'react';
 import { subscribeToNewsletter } from '@/app/actions';
 import { Input } from '@/components/ui/input';
@@ -23,7 +24,7 @@ function SubmitButton() {
 }
 
 export default function NewsletterForm() {
-  const [state, formAction] = useFormState(subscribeToNewsletter, initialState);
+  const [state, formAction] = useActionState(subscribeToNewsletter, initialState);
   const formRef = useRef<HTMLFormElement>(null);
 
   useEffect(() => {
