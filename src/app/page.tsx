@@ -1,23 +1,28 @@
 import Image from 'next/image';
-import { generateBackgroundImage } from '@/ai/flows/generate-background-image';
 import { Card, CardContent, CardHeader } from '@/components/ui/card';
 import NewsletterForm from '@/components/coming-soon/newsletter-form';
 import SocialLinks from '@/components/coming-soon/social-links';
+import { PlaceHolderImages } from '@/lib/placeholder-images';
 
-export default async function ComingSoonPage() {
-  const { imageUrl } = await generateBackgroundImage({
-    brandAesthetic: 'a minimalist and elegant fashion flat lay with neutral tones',
-  });
+export default function ComingSoonPage() {
+  const backgroundImage = PlaceHolderImages.find(img => img.id === 'coming-soon-background');
+  
+  if (!backgroundImage) {
+    // Fallback in case the image is not found
+    return <div>Error: Background image not found.</div>;
+  }
+
+  const { imageUrl, description, imageHint } = backgroundImage;
 
   return (
     <div className="relative min-h-screen w-full">
       <Image
         src={imageUrl}
-        alt="Minimalist fashion flat lay"
+        alt={description}
         fill
         className="object-cover"
         priority
-        data-ai-hint="fashion minimal"
+        data-ai-hint={imageHint}
       />
       <div className="absolute inset-0 bg-black/40" />
       <div className="relative z-10 flex min-h-screen flex-col items-center justify-center p-4 sm:p-6 md:p-8">
