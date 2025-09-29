@@ -1,3 +1,5 @@
+import Link from 'next/link';
+
 export default function AffiliateDisclosurePage() {
   return (
     <div className="bg-background text-foreground">
@@ -39,7 +41,14 @@ export default function AffiliateDisclosurePage() {
             
             <div className="text-center pt-6">
                 <p className="text-sm text-muted-foreground">This seamless digital experience is powered by our technology partners at SYNC TECH.</p>
-                <p className="font-bold text-foreground mt-1">Powered by SYNC TECH</p>
+                <Link
+                  href="https://synctech.ie"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="font-bold text-primary hover:underline mt-1"
+                >
+                  Powered by SYNC TECH
+                </Link>
             </div>
           </div>
         </div>
