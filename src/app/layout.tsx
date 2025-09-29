@@ -3,6 +3,7 @@ import './globals.css';
 import { Toaster } from "@/components/ui/toaster";
 import Header from '@/components/layout/header';
 import Footer from '@/components/layout/footer';
+import Breadcrumb from '@/components/layout/breadcrumb';
 
 export const metadata: Metadata = {
   title: 'APTLY DRESSED | Timeless Style, Curated for You',
@@ -23,6 +24,7 @@ export default function RootLayout({
       </head>
       <body className="font-body antialiased flex flex-col min-h-screen">
         <Header />
+        <Breadcrumb />
         <main className="flex-grow">
           {children}
         </main>
