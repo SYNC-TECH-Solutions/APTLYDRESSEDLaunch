@@ -1,1 +1,5 @@
-// Flows will be imported for their side effects in this file.
+import { config } from 'dotenv';
+config();
+
+// Important: load dev-only flows here.
+import '@/ai/flows/generate-background-image.ts';
