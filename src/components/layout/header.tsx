@@ -1,5 +1,4 @@
 import Link from 'next/link';
-import { cn } from '@/lib/utils';
 import MobileNav from './mobile-nav';
 import MainNav from './main-nav';
 
@@ -9,7 +8,7 @@ export default function Header() {
       <div className="container flex h-14 items-center justify-between">
         <div className="flex items-center">
           <Link href="/" className="flex items-center space-x-2">
-            <span className="font-headline text-2xl font-bold tracking-wider">APTLY DRESSED</span>
+            <span className="font-headline text-2xl font-bold tracking-wider pl-4">APTLY DRESSED</span>
           </Link>
         </div>
         
