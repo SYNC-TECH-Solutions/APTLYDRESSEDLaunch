@@ -53,11 +53,11 @@ export async function subscribeToNewsletter(prevState: FormState, formData: Form
     };
 
   } catch (error: any) {
-    // Return the specific Firebase error message for debugging
-    const errorMessage = error.message || "An unknown error occurred.";
+    console.error("Error communicating with Firestore:", error);
     return {
-      message: `Error: ${errorMessage}`,
+      message: "Something went wrong. Please try again later.",
       success: false,
     };
   }
 }
+
