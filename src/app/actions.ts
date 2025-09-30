@@ -2,6 +2,8 @@
 'use server';
 
 import { z } from 'zod';
+import { db } from '@/lib/firebase';
+import { collection, addDoc, serverTimestamp, query, where, getDocs } from 'firebase/firestore';
 
 const subscribeSchema = z.object({
   email: z.string().email({ message: "Please enter a valid email address." }),
@@ -24,12 +26,37 @@ export async function subscribeToNewsletter(prevState: FormState, formData: Form
     };
   }
 
-  // Here you would typically save the email to a database or a mailing list service like Mailchimp or ConvertKit.
-  // For this demo, we'll just log it to the console.
-  console.log(`New subscriber: ${validatedFields.data.email}`);
+  const { email } = validatedFields.data;
 
-  return {
-    message: "Thank you! You're on the list.",
-    success: true,
-  };
+  try {
+    // Check if the email already exists
+    const subscribersRef = collection(db, 'subscribers');
+    const q = query(subscribersRef, where('email', '==', email));
+    const querySnapshot = await getDocs(q);
+
+    if (!querySnapshot.empty) {
+      return {
+        message: "This email is already subscribed.",
+        success: false,
+      };
+    }
+
+    // Add the new subscriber
+    await addDoc(subscribersRef, {
+      email: email,
+      subscribedAt: serverTimestamp(),
+    });
+
+    return {
+      message: "Thank you! You're on the list.",
+      success: true,
+    };
+
+  } catch (error) {
+    console.error("Error adding document: ", error);
+    return {
+      message: "Something went wrong. Please try again later.",
+      success: false,
+    };
+  }
 }
