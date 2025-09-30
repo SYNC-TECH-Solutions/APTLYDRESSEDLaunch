@@ -1,12 +1,12 @@
-import { Instagram, Twitter, Facebook } from 'lucide-react';
+import { Instagram, Facebook, Linkedin } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip';
 
 export default function SocialLinks() {
   const socialMedia = [
-    { name: 'Instagram', icon: Instagram, href: 'https://instagram.com' },
-    { name: 'Twitter', icon: Twitter, href: 'https://twitter.com' },
-    { name: 'Facebook', icon: Facebook, href: 'https://facebook.com' },
+    { name: 'Instagram', icon: Instagram, href: 'https://www.instagram.com/aptlydressed/' },
+    { name: 'Facebook', icon: Facebook, href: 'https://www.facebook.com/aptlydressed/' },
+    { name: 'LinkedIn', icon: Linkedin, href: 'https://www.linkedin.com/company/aptlydressed' },
   ];
 
   return (
