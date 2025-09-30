@@ -53,9 +53,9 @@ export async function subscribeToNewsletter(prevState: FormState, formData: Form
     };
 
   } catch (error: any) {
-    // Return the specific error message for debugging
+    // Return a generic error message for the user
     return {
-      message: `Error: ${error.message}`,
+      message: "Something went wrong. Please try again later.",
       success: false,
     };
   }
