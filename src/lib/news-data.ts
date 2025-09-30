@@ -14,6 +14,22 @@ export type Post = {
 
 export const newsPosts: Post[] = [
   {
+    slug: 'seeking-brand-partners',
+    title: 'Open for Business & Seeking Brand Partners',
+    date: '2024-08-20',
+    image: {
+      src: 'https://images.unsplash.com/photo-1556742502-ec7c0e9f34b1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxwYXJ0bmVyc2hpcHxlbnwwfHx8fDE3NTkyNDYzODV8MA&ixlib=rb-4.1.0&q=80&w=1080',
+      alt: 'Two people shaking hands over a business agreement',
+      aiHint: 'business partnership',
+    },
+    excerpt: 'APTLY DRESSED is officially open! As we begin our journey, we are actively seeking partnerships with innovative and quality-driven clothing brands.',
+    content: `
+      <p>We are thrilled to announce that APTLY DRESSED is now open for business! Our launch marks the beginning of a new chapter in curated fashion, and we are eager to build strong relationships within the industry.</p>
+      <p>Our core mission is to connect discerning shoppers with high-quality, timeless fashion. To do this, we are actively seeking to partner with clothing brands and similar businesses who share our commitment to craftsmanship, sustainability, and modern design.</p>
+      <p>If you represent a brand that aligns with our values, we would be more than happy to explore a potential partnership. We believe that by working together, we can bring exceptional style to a wider audience. Please reach out to us via our <a href="/contact">contact page</a> to start a conversation.</p>
+    `,
+  },
+  {
     slug: 'grand-opening-announcement',
     title: 'We Are Officially Live!',
     date: '2024-08-15',
@@ -40,7 +56,7 @@ export const newsPosts: Post[] = [
     },
     excerpt: 'At APTLY DRESSED, sustainability is not just a buzzword; it\'s a core principle. Learn about how we\'re championing mindful consumption.',
     content: `
-      <p>In today's fast-fashion landscape, we believe in taking a slower, more intentional approach. Our commitment to sustainability is woven into the fabric of APTLY DRESSED. We prioritize quality over quantity, selecting pieces made from superior, eco-friendly materials and produced through ethical manufacturing processes.</p>
+      <p>In today\'s fast-fashion landscape, we believe in taking a slower, more intentional approach. Our commitment to sustainability is woven into the fabric of APTLY DRESSED. We prioritize quality over quantity, selecting pieces made from superior, eco-friendly materials and produced through ethical manufacturing processes.</p>
       <p>We partner with brands that are transparent about their supply chains and are actively working to reduce their environmental footprint. By choosing timeless designs and durable craftsmanship, we empower you to build a wardrobe that not only looks good but also does good.</p>
       <p>Join us in championing a more sustainable future for fashion, one beautiful, lasting piece at a time.</p>
     `,
@@ -51,7 +67,7 @@ export const newsPosts: Post[] = [
     date: '2024-07-20',
     excerpt: 'Get an exclusive preview of the key trends and timeless pieces that will define your autumn and winter wardrobe.',
     content: `
-      <p>As the leaves begin to turn, so does our attention to the wardrobe shifts that come with the cooler seasons. We are thrilled to give you a first look at our upcoming Autumn/Winter '24 collection, a curated selection of cozy knits, structured outerwear, and rich, earthy tones.</p>
+      <p>As the leaves begin to turn, so does our attention to the wardrobe shifts that come with the cooler seasons. We are thrilled to give you a first look at our upcoming Autumn/Winter \'24 collection, a curated selection of cozy knits, structured outerwear, and rich, earthy tones.</p>
       <p>This season is all about blending comfort with sophistication. Expect to see luxurious cashmere, tailored wool coats, and versatile leather boots that will anchor your look. Our curation focuses on investment pieces that you can layer, mix, and match to create a multitude of elegant outfits.</p>
       <p>Stay tuned for the full collection drop, and get ready to embrace the new season in style.</p>
     `,
