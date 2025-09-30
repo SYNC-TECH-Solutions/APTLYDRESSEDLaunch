@@ -53,11 +53,10 @@ export async function subscribeToNewsletter(prevState: FormState, formData: Form
     };
 
   } catch (error: any) {
-    console.error("Error communicating with Firestore:", error);
+    // Return the specific error message for debugging
     return {
-      message: "Something went wrong. Please try again later.",
+      message: `Error: ${error.message}`,
       success: false,
     };
   }
 }
-
