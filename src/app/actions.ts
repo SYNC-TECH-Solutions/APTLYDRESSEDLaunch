@@ -15,12 +15,15 @@ type FormState = {
 }
 
 export async function subscribeToNewsletter(prevState: FormState, formData: FormData): Promise<FormState> {
+  console.log('subscribeToNewsletter action initiated.');
+
   const validatedFields = subscribeSchema.safeParse({
     email: formData.get('email'),
   });
 
   if (!validatedFields.success) {
     const errorMessage = validatedFields.error.flatten().fieldErrors.email?.[0] || "Invalid submission.";
+    console.error('Validation failed:', errorMessage);
     return {
       message: errorMessage,
       success: false,
@@ -28,24 +31,30 @@ export async function subscribeToNewsletter(prevState: FormState, formData: Form
   }
 
   const { email } = validatedFields.data;
+  console.log('Email validated:', email);
 
   try {
     const subscribersRef = collection(db, 'subscribers');
+    console.log('Firestore collection reference obtained.');
 
     const q = query(subscribersRef, where('email', '==', email));
+    console.log('Checking if email already exists...');
     const querySnapshot = await getDocs(q);
 
     if (!querySnapshot.empty) {
+      console.log('Email already exists in the database.');
       return {
         message: "This email is already subscribed.",
         success: false,
       };
     }
 
+    console.log('Email is new. Attempting to add to Firestore...');
     await addDoc(subscribersRef, {
       email: email,
       subscribedAt: serverTimestamp(),
     });
+    console.log('Successfully added email to Firestore.');
 
     return {
       message: "Thank you! You're on the list.",
